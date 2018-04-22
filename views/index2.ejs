@@ -1,0 +1,57 @@
+<html ng-app="app.todos">
+    <head>
+        <title>Node/Angular Todos</title>
+
+    <!-- load cdn styles -->
+        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.8.1/css/xeditable.min.css">
+        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
+
+        <!-- load app styles -->
+        <link rel="stylesheet " href="assets/css/style.css ">
+    <!-- load cdn scripts -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.8.1/js/xeditable.min.js"></script>
+        <!--l load app -->
+        <script src="assets/js/main/app.js"></script>
+        <script src="assets/js/main/services/svTodos.js"></script>
+
+    </head>
+
+
+<body ng-controller="todoController">
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1> Đăng nhập <span class="label label-warning"></span></h1>
+        </div>
+
+
+
+
+        <div id="todo-form" class="row">
+            <div class="col-md-12 col-sm-offset-2 text-center">
+                <form>
+                    <div class="row">
+                        <p class="col-md-5"> User : </p>
+                        <div class="form-group col-md-5">
+                            <input type="text" ng-model="formData.text" class="form-control input-lg text-center" placeholder="Enter username ">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-5"> Password : </p>
+                        <div class="form-group col-md-5">
+                            <input type="text" ng-model="formData.text" class="form-control input-lg text-center" placeholder="Enter password ">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg"  ng-click="createTodo()">Sign in</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
